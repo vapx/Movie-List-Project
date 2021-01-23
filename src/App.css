@@ -12,3 +12,30 @@ body{
   overflow-x:auto;
   flex-wrap:nowrap;
 }
+
+.image-container{
+  position:relative;
+  transition: transform 0.5s;
+}
+
+.image-container:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay{
+  opacity: 1;
+}
+
+.overlay{
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  opacity:0;
+  transition:0.5s ease;
+  width:100%;
+  font-size:20px;
+  padding: 20px;
+  text-align: center;
+  bottom:0;
+  color:white;
+}
